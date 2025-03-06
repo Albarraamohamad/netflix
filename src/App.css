@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background: black;
   color: white;
+  font-family: 'poppins';
+  
+}
+.barra {
+  position: relative; /* Needed for absolute positioning of ::before and ::after */
+  background-image: url('./assets/background_banner.jpg');
+  background-size: cover; /* Adjusts image to cover the full div */
+  background-position: center;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+/* Black overlay using ::before */
+.barra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Optional: Additional effect using ::after */
+.barra::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); /* Fades to transparent */
+  z-index: 2;
+}
+
+/* Ensure content appears above overlay */
+.barra > * {
+  position: relative;
+  z-index: 2;
+}
+.center {
+  align-items: center;
+}
+.Require {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to right, black, transparent 20%, transparent 80%, black),
+              url('./assets/background_banner.jpg') center/cover no-repeat;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+@media (max-width: 430px) {
+  .barra {
+    height: 50vh;
+    width: 100%;
   }
 }
