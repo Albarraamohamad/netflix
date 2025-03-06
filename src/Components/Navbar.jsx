@@ -47,7 +47,7 @@ const Navbar = () => {
             <div className="absolute top-12 left-0 bg-gray-800 text-white rounded-lg shadow-lg w-48">
               <ul className="p-2">
                 <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer">
-                  <Link to="/">Home</Link>
+                  <Link to="/Home">Home</Link>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer">
                   <Link to="/Series">Series</Link>
