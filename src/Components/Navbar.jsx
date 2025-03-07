@@ -74,7 +74,7 @@ const Navbar = () => {
       <div className="relative flex gap-4 items-center">
         <SearchBar/>
         <Link to="/Children" className="text-white hidden md:block">Children</Link>
-        <img src={bell} alt="Notifications" className="cursor-pointer hidden md:block" />
+        <img src={bell} alt="Notifications" className="cursor-pointer hidden md:block xs:flex" />
 
         {/* Profile & Dropdown */}
         <div className="relative">
