@@ -49,7 +49,7 @@ const SearchBar = ({ searchIcon }) => {
       <img
         src={search_Icon}
         alt="Search"
-        className="cursor-pointer hidden md:block"
+        className="cursor-pointer hidden md:block xs:flex"
         onClick={() => setShowSearch(true)}
       />
 

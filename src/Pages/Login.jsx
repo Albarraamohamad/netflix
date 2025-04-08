@@ -28,9 +28,12 @@ const Login = () => {
               <option value="en">English</option>
               <option value="ar">Arabic</option>
             </select>
+            <Link to='/Signin'>
             <button className="bg-[#E50914] px-3 xs:px-2 sm:px-4 py-1.5 rounded-md font-bold text-xs sm:text-sm">
               Sign in
             </button>
+            </Link>
+            
           </div>
         </div>
 
@@ -138,7 +141,7 @@ const Login = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="container mx-auto">
+      <div className="">
         <Footer />
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaFacebook, FaGoogle, FaApple } from "react-icons/fa";
 import styled from "styled-components";
 
@@ -12,8 +12,8 @@ const Require = () => {
   };
 
   return (
-<div className="barra">
-<RequireContainer>
+    <div className="bar">
+      <RequireContainer>
       <FormContainer>
         <Title>Login</Title>
         <Form onSubmit={handleSubmit}>
@@ -43,10 +43,9 @@ const Require = () => {
         <SignupText>Don't have an account? <a href="#">Sign up</a></SignupText>
       </FormContainer>
     </RequireContainer>
-</div>
+    </div>
   );
 };
-
 
 // Styled Components
 const RequireContainer = styled.div`
@@ -54,7 +53,7 @@ const RequireContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
- 
+  padding: 10px; /* Ensures spacing on smaller screens */
 `;
 
 const FormContainer = styled.div`
@@ -64,10 +63,15 @@ const FormContainer = styled.div`
   padding: 2rem;
   color: rgba(243, 244, 246, 1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+
+  @media (max-width: 430px) {
+    width: 90%;
+    padding: 1.5rem;
+  }
 `;
 
 const Title = styled.p`
-  text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
 `;
@@ -79,13 +83,14 @@ const Form = styled.form`
 const InputGroup = styled.div`
   margin-top: 0.25rem;
   font-size: 0.875rem;
-  
+  text-align: left;
+
   label {
     display: block;
     color: rgba(156, 163, 175, 1);
     margin-bottom: 4px;
   }
-  
+
   input {
     width: 100%;
     border-radius: 0.375rem;
@@ -98,6 +103,12 @@ const InputGroup = styled.div`
 
   input:focus {
     border-color: rgba(167, 139, 250, 1);
+  }
+
+  @media (max-width: 430px) {
+    input {
+      padding: 0.6rem 0.8rem; /* Slightly smaller padding */
+    }
   }
 `;
 
@@ -134,6 +145,10 @@ const SignButton = styled.button`
   &:hover {
     background-color: rgba(139, 92, 246, 1);
   }
+
+  @media (max-width: 430px) {
+    padding: 0.6rem; /* Smaller padding for small screens */
+  }
 `;
 
 const SocialMessage = styled.div`
@@ -159,6 +174,10 @@ const SocialIcons = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10px;
+
+  @media (max-width: 430px) {
+    gap: 10px; /* Increases spacing between icons */
+  }
 `;
 
 const IconButton = styled.button`
@@ -179,6 +198,14 @@ const IconButton = styled.button`
     width: 1.25rem;
     fill: #fff;
   }
+
+  @media (max-width: 430px) {
+    padding: 0.5rem; /* Smaller buttons for smaller screens */
+    svg {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
 `;
 
 const SignupText = styled.p`
@@ -194,6 +221,10 @@ const SignupText = styled.p`
 
   a:hover {
     text-decoration: underline rgba(167, 139, 250, 1);
+  }
+
+  @media (max-width: 430px) {
+    font-size: 0.7rem;
   }
 `;
 

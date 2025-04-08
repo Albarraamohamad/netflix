@@ -47,7 +47,7 @@ const Navbar = () => {
             <div className="absolute top-12 left-0 bg-gray-800 text-white rounded-lg shadow-lg w-48">
               <ul className="p-2">
                 <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer">
-                  <Link to="/">Home</Link>
+                  <Link to="/Home">Home</Link>
                 </li>
                 <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer">
                   <Link to="/Series">Series</Link>
@@ -72,9 +72,11 @@ const Navbar = () => {
 
       {/* Right Side: Icons + Profile Dropdown */}
       <div className="relative flex gap-4 items-center">
+
         <SearchBar/>
+
         <Link to="/Children" className="text-white hidden md:block">Children</Link>
-        <img src={bell} alt="Notifications" className="cursor-pointer hidden md:block" />
+        <img src={bell} alt="Notifications" className="cursor-pointer hidden  md:block xs:flex" />
 
         {/* Profile & Dropdown */}
         <div className="relative">
@@ -96,6 +98,10 @@ const Navbar = () => {
                   <button onClick={() => alert("Logged out")}>Logout</button>
 
                   </Link>
+                  
+                </li>
+                <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer">
+                  <Link to='/Children'>Children</Link>
                 </li>
               </ul>
             </div>

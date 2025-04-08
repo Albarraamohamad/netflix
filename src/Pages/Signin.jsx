@@ -11,7 +11,7 @@ const Signin = () => {
   };
 
   return (
-    <div className='flex justify-center items-center h-[100vh]'>
+    <div className='flex justify-center items-center h-[100vh] bar'>
       <StyledWrapper>
         <div className="container">
           <div className="heading">Sign In</div>

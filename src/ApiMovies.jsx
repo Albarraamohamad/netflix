@@ -138,6 +138,8 @@ const MovieRow = ({ title, movies, setHoveredMovie, setPopupPosition }) => {
           ))}
         </div>
       </div>
+     
+      
     </div>
   );
 };

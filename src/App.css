@@ -50,6 +50,9 @@ body {
   position: relative;
   z-index: 2;
 }
+.bar {
+  background-image: url('/public/hero_banner.jpg');
+}
 .center {
   align-items: center;
 }
